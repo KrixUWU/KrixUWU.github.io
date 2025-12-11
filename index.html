@@ -16,20 +16,18 @@
 
 <!-- Rejestracja Service Workera -->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register("sw.js")
-      .then(reg => console.log("Service Worker zarejestrowany:", reg))
-      .catch(err => console.error("Service Worker ERROR:", err));
-  }
-});
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('sw.js')
+    .then(reg => console.log("Service Worker zarejestrowany:", reg))
+    .catch(err => console.error("Service Worker error:", err));
+}
 </script>
 
-<link href="mObywatel 2.0_files/all.min.css" rel="stylesheet">
+<link href="mObywatel_2.0_files/all.min.css" rel="stylesheet">
 
 <style>
-/* --- (WSTAWIAM cały Twój CSS bez zmian) --- */
-
+/* Twój cały CSS tutaj — możesz wkleić dokładnie jak masz */
 @font-face {
     font-family: Roboto;
     font-style: normal;
@@ -83,13 +81,18 @@ document.addEventListener("DOMContentLoaded", () => {
     --blue-active: #064792;
 }
 
-* { user-select: none; box-sizing: border-box; }
+* {
+    user-select: none;
+    box-sizing: border-box;
+}
 
-img { pointer-events: none; }
+img {
+    pointer-events: none;
+}
 
-/* Twój cały oryginalny CSS (zniżony dla przejrzystości) */
-
+/* Dalej wklej cały pozostały CSS, dokładnie tak jak masz */
 </style>
+
 </head>
 
 <body>
@@ -98,12 +101,12 @@ img { pointer-events: none; }
     <div class="Login_container_1">
         <main class="Login_main_1">
 
-            <img src="mObywatel 2.0_files/coi_common_ic_mobywatel_horizontal_logo_text.svg"
+            <img src="mObywatel_2.0_files/coi_common_ic_mobywatel_horizontal_logo_text.svg"
                  alt="Logo"
                  class="Login_logoTop">
 
             <div class="Login_changePassword_1">
-                <img src="mObywatel 2.0_files/aa008_change_password_blue.svg"
+                <img src="mObywatel_2.0_files/aa008_change_password_blue.svg"
                      alt="Change Password"
                      class="Login_changePasswordIcon">
             </div>
@@ -129,8 +132,8 @@ img { pointer-events: none; }
 
         <footer class="Login_footer">
             <div class="Login_footerImages">
-                <img src="mObywatel 2.0_files/coi_common_ui_ic_coi_mobywatel_logo.svg" style="width: 5em;">
-                <img src="mObywatel 2.0_files/coi_common_ui_ic_mc_mobywatel_logo.svg" style="width: 4em;">
+                <img src="mObywatel_2.0_files/coi_common_ui_ic_coi_mobywatel_logo.svg" style="width: 5em; height: auto;" alt="Logo 1">
+                <img src="mObywatel_2.0_files/coi_common_ui_ic_mc_mobywatel_logo.svg" style="width: 4em; height: auto;" alt="Logo 2">
             </div>
             <p class="Login_versionText">wersja 4.41.2 (8)</p>
         </footer>
